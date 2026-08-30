@@ -80,11 +80,80 @@ class Expense(models.Model):
         default=0,
     )
 
+    # Miscellaneous expenses — Fixed expenses
+    phone = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    mobile = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    postage = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    fax = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    email_expense = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    # Miscellaneous expenses — Other reimbursements
+    stationary = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    telegram = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    photo_copies = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    octroi = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    demurrage = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    collie_cartage = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
+
+    # Kept temporarily for compatibility with existing records
     miscellaneous_1 = models.DecimalField(
-    max_digits=12,
-    decimal_places=2,
-    default=0,
-)
+        max_digits=12,
+        decimal_places=2,
+        default=0,
+    )
 
     miscellaneous_2 = models.DecimalField(
         max_digits=12,

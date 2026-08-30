@@ -28,13 +28,32 @@ class ExpenseSerializer(serializers.ModelSerializer):
             "stay",
             "food",
             "da",
+
+            # Miscellaneous — Fixed expenses
+            "phone",
+            "mobile",
+            "postage",
+            "fax",
+            "email_expense",
+
+            # Miscellaneous — Other reimbursements
+            "stationary",
+            "telegram",
+            "photo_copies",
+            "octroi",
+            "demurrage",
+            "collie_cartage",
+
+            # Legacy fields — kept for existing records
             "miscellaneous_1",
             "miscellaneous_2",
+
             "description",
             "remarks",
             "created_at",
             "updated_at",
         ]
+
         read_only_fields = [
             "id",
             "user",
