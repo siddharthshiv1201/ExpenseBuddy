@@ -1,5 +1,5 @@
 from django.db import models
-from cloudinary_storage.storage import MediaCloudinaryStorage
+
 
 
 class Receipt(models.Model):
@@ -10,9 +10,8 @@ class Receipt(models.Model):
     )
 
     file = models.FileField(
-        upload_to="receipts/%Y/%m/",
-        storage=MediaCloudinaryStorage(),
-    )
+    upload_to="receipts/%Y/%m/",
+)
 
     original_filename = models.CharField(
         max_length=255,

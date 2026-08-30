@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "expenses",
     "receipts",
     "monthly_reports",
+    "cloudinary_storage",
+    "cloudinary",
 ]
 
 
@@ -239,3 +241,14 @@ MIGRATION_MODULES = {
 }
 
 AUTH_USER_MODEL = "accounts.User"
+CLOUDINARY_STORAGE = {
+    "CLOUDINARY_URL": os.getenv("CLOUDINARY_URL"),
+}
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
